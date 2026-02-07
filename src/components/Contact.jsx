@@ -1,33 +1,72 @@
-export default function Contact() {
+import { Facebook, Youtube, Instagram, Linkedin } from "lucide-react";
+
+export default function Footer() {
   return (
-    <section id="contact" className="py-16 bg-white">
-      <div className="mx-auto max-w-6xl px-6">
-        <div className="rounded-2xl bg-black text-white p-10 md:p-14">
-          <h2 className="text-3xl md:text-4xl font-extrabold">
-            Let’s build something amazing.
-          </h2>
+    <footer className="w-full">
+      {/* TOP LIME STRIP */}
+      <div className="w-full bg-lime-400 py-10 px-6 text-center">
+        <h3 className="text-black font-extrabold text-3xl sm:text-4xl tracking-wide">
+          दिमाग में विचार और थाली में अचार... अपना होना चाहिए
+        </h3>
+      </div>
 
-          <p className="mt-4 text-white/80 text-lg">
-            Want branding, website or digital growth? Message us now.
-          </p>
+      {/* MAIN FOOTER */}
+      <div className="relative w-full bg-black overflow-hidden">
+        {/* soft background gradient */}
+        <div className="absolute inset-0 bg-gradient-to-b from-white/10 via-black to-black" />
 
-          <div className="mt-8 flex flex-col sm:flex-row gap-4">
-            <a
-              href="tel:+919999777471"
-              className="bg-yellow-400 text-black px-6 py-3 rounded-xl font-bold text-center hover:bg-yellow-300"
-            >
-              Call Now
-            </a>
+        <div className="relative z-10 mx-auto max-w-7xl px-6 py-20">
+          <div className="grid grid-cols-1 lg:grid-cols-3 items-center gap-12">
+            {/* LEFT LINKS */}
+            <div className="flex justify-center lg:justify-start">
+              <div className="flex flex-wrap gap-x-5 gap-y-3 text-white/70 text-sm">
+                {["Home", "About", "Services", "Portfolio", "Contact", "Blogs"].map(
+                  (item) => (
+                    <a
+                      key={item}
+                      href="#"
+                      className="hover:text-white transition"
+                    >
+                      {item}
+                    </a>
+                  )
+                )}
+              </div>
+            </div>
 
-            <a
-              href="mailto:vipin@coffeeandcreative.in"
-              className="border border-white/30 px-6 py-3 rounded-xl font-semibold text-center hover:bg-white hover:text-black transition"
-            >
-              Email Us
-            </a>
+            {/* CENTER LOGO / QUOTE IMAGE */}
+            <div className="flex justify-center">
+              <img
+                src="/footer-center.png"
+                alt="Coffee & Creative Footer"
+                className="w-[520px] max-w-full opacity-90"
+                draggable="false"
+              />
+            </div>
+
+            {/* RIGHT SOCIAL ICONS */}
+            <div className="flex justify-center lg:justify-end">
+              <div className="flex items-center gap-5 text-white/60">
+                <a href="#" className="hover:text-white transition">
+                  <Facebook className="w-5 h-5" />
+                </a>
+                <a href="#" className="hover:text-white transition">
+                  <Youtube className="w-5 h-5" />
+                </a>
+                <a href="#" className="hover:text-white transition">
+                  <Instagram className="w-5 h-5" />
+                </a>
+                <a href="#" className="hover:text-white transition">
+                  <Linkedin className="w-5 h-5" />
+                </a>
+              </div>
+            </div>
           </div>
+
+          {/* COPYRIGHT */}
+        
         </div>
       </div>
-    </section>
+    </footer>
   );
 }

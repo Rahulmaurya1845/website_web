@@ -1,23 +1,45 @@
 export default function Portfolio() {
-  const works = ["Branding", "Social Media", "Website", "Photography", "Films", "Ads"];
-
   return (
-    <section id="portfolio" className="py-16 bg-white">
-      <div className="mx-auto max-w-6xl px-6">
-        <h2 className="text-3xl md:text-4xl font-extrabold">Portfolio</h2>
-        <p className="mt-3 text-gray-600">
-          Some of our recent creative work.
+    <section id="portfolio" className="w-full bg-lime-400">
+      {/* TOP STRIP */}
+      <div className="w-full py-6 flex items-center justify-center">
+        <p className="text-black text-2xl sm:text-3xl font-semibold tracking-wide">
+          ♡ <span className="ml-2">We make beauty out of chaos.</span>
         </p>
+      </div>
 
-        <div className="mt-10 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
-          {works.map((w) => (
-            <div
-              key={w}
-              className="rounded-2xl bg-gray-100 border p-8 flex items-center justify-center text-xl font-bold"
-            >
-              {w}
+      {/* VIDEO FRAME AREA */}
+      <div className="px-4 pb-10">
+        <div className="mx-auto max-w-7xl bg-black border-[10px] border-black">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-0">
+            {/* LEFT VIDEO */}
+            <div className="relative w-full bg-black">
+              <div className="aspect-video w-full">
+                <iframe
+                  className="w-full h-full"
+                  src="https://www.youtube.com/embed/ScMzIvxBSi4"
+                  title="Coffee & Creative - Promo"
+                  frameBorder="0"
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                  allowFullScreen
+                />
+              </div>
             </div>
-          ))}
+
+            {/* RIGHT VIDEO */}
+            <div className="relative w-full bg-black">
+              <div className="aspect-video w-full">
+                <iframe
+                  className="w-full h-full"
+                  src="https://www.youtube.com/embed/tgbNymZ7vqY"
+                  title="Coffee & Creative - Diwali"
+                  frameBorder="0"
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                  allowFullScreen
+                />
+              </div>
+            </div>
+          </div>
         </div>
       </div>
     </section>

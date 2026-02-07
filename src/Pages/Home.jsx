@@ -5,15 +5,17 @@ import Portfolio from "../components/Portfolio.jsx";
 import About from "../components/About.jsx";
 import Contact from "../components/Contact.jsx";
 import Footer from "../components/Footer.jsx";
+import ServicesAndChallenge from "../components/ServicesAndChallenge.jsx";
 
 export default function Home() {
   return (
     <>
-      <Navbar />
+
       <Hero />
       <Services />
       <Portfolio />
       <About />
+            <ServicesAndChallenge />
       <Contact />
       <Footer />
     </>
